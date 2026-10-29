@@ -27,23 +27,21 @@ public class LoginServlet extends HttpServlet
         {
             Long id = Long.parseLong(req.getParameter("id"));
             LoginService.deleteById(id);
-            resp.sendRedirect("Logins.jsp");
+            resp.sendRedirect("Login.jsp");
             return;
         }
-        String nombre = req.getParameter("nombre" );
-        Integer edad = Integer.parseInt( req.getParameter("edad" ) );
-        Double promedio = Double.parseDouble( req.getParameter("promedio" ) );
+        String usuario = req.getParameter("usuario" );
+        Integer password = Integer.parseInt( req.getParameter("password" ) );
         Long id = Long.parseLong( req.getParameter("id" ) );
 
         Login Login = org.gerdoc.model.Login.builder( )
-                .nombre( nombre )
-                .edad( edad )
-                .promedio( promedio )
+                .usuario( usuario )
+                .password( password )
                 .build();
-        if( "update".equals(accion) )
+        if( "select".equals(accion) )
         {
             Login.setId( id );
-            LoginService.update( Login );
+            LoginService.select( Login );
         }
         else
         {

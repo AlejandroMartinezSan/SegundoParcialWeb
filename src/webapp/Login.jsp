@@ -11,11 +11,13 @@
 <div class="container">
     <h1>Proyecto funcionando</h1>
             <form action="LoginServlet" method="post" id="formLogin">
+             <input type="hidden" name="accion" value="select">
+
                 <div class="mb-3">
-                 <label for="Usuario" class="form-label">Usuario</label>
-                 <input type="text" class="form-control" id="user" name="usuario" required>
+                 <label for="usuario" class="form-label">Usuario</label>
+                 <input type="text" class="form-control" id="usuario" name="usuario" required>
                  <label for="Password" class="form-label">Password</label>
-                <input type="text" class="form-control" id="password" name="pass" required>
+                <input type="text" class="form-control" id="password" name="password" required>
                  <button type="submit" class="btn btn-primary">
                  Iniciar sesión
                             </button>
