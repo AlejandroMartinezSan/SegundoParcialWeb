@@ -11,4 +11,6 @@ public interface LoginService
     void save( Login Login );
     void deleteById( Long id );
     void update( Login Login );
+
+    Login authenticate(String usuarioInput, String contrasenaInput);
 }

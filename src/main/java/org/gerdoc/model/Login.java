@@ -28,4 +28,16 @@ public class Login
 
     @Column(name = "PROMEDIO")
     private Double promedio;
+
+    public String getRol() {
+        return null;
+    }
+
+    public boolean isActivo() {
+        return false;
+    }
+
+    public String getNombreCompleto() {
+        return null;
+    }
 }
